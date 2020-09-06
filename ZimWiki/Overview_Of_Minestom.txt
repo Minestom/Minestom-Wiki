@@ -1,0 +1,35 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2020-09-06T22:57:23+10:00
+
+====== Overview Of Minestom ======
+
+== Hey there, welcome to the world of Minestom! ==
+
+Minestom is a dynamic, open source Minecraft __server building__ API.
+
+What this means is that when you use minestom, you are essentially able to create your own "Bukkit" or your own "Forge".
+
+Since Minestom is a cleanroom server buiding API (Has no vanilla code), it comes with its own fair share of advantages and disadvantages.
+
+== Advantages: ==
+
+- Much faster then other servers
+	Because of the API being coded from scratch, there is a lot of room to pick and choose what kind of features you would like your server software to have. An example of this is handling block entities. In vanilla Minecraft, there is no option to turn off block entities due to it being hardcoded into the game. However in Minestom, you can choose to implement block entities in your own way, use the vanilla reimplementation fork's block entities, or you could have them completely switched off. This results in better performance, especially for servers such as minigame servers that don't need many features that are hardcoded into the vanilla game.
+- Multithreaded
+	In Minestom, one of the key features is the highly threaded system. This can be seen in the chunk groups, in which chunks loaded far apart from each other have different threads. This is another contributing factor to the speed of Minestom-built servers.
+- Scalable Instance System
+	Minestom has an 'Instance' system which is much more scalable then traditional 'Worlds'.
+- Modern API
+	Throughout Minestom's development, one of the pivotal considerations in its design has been a modern developer API.
+
+== Disadvantages: ==
+
+- No native Bukkit/Spigot plugin support
+	This is one of the most discouraging parts of minestom; It has no Bukkit/Spigot support. What this means is that the majority of work done for Minecraft servers by the community is made irrelavent to a Minestom Server. Although it is not impossible to recreate this API, it would simply require a lot of work.
+- Does not work with older clients
+	Minestom only supports the newest versions of the game. You will need to run backwards-compatibility software externally in order to connect on a lower version client.
+- Little vanilla parity
+	Due to Minestom being completely without Minecraft code, it has no default vanilla features by default. However, you may use the Vanillla Reimplementation fork in order to get somewhat vanilla parity. (Currently is in early stages of development)
+- Longer to develop something playable
+	While traditional server's have the benefit of having Mojang's established ecosystem in place, Minestom requires you to design your own. What this means is that implementing something like a skyblock ore generator may take much longer in Minestom as opposed to Spigot/Bukkit
