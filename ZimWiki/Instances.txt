@@ -1,0 +1,38 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2020-09-06T23:36:14+10:00
+
+====== Instances ======
+
+Instances are what replace "worlds" from Minecraft vanilla. Instances are lightweight and should offer similar properties
+
+They can be accessed by using the InstanceManager or by getting an entity instance
+
+--------------------
+InstanceManager instanceManager = MinecraftServer.getInstanceManager()
+// Or
+Entity#getInstance
+--------------------
+
+There are two kinds of instance: InstanceContainer and SharedInstance
+
+An InstanceContainer contains both chunks and entities, a SharedInstance needs to share chunks with its container.
+
+You can create an InstanceContainer by calling:
+
+--------------------
+InstanceContainer instanceContainer = instanceManager.createInstanceContainer();
+--------------------
+
+And a SharedInstance using:
+--------------------
+SharedInstance sharedInstance = instanceManager.createSharedInstance(instanceContainer);
+--------------------
+
+Instances do need to have a ChunkGenerator specified, without it no chunk can be generated.
+
+--------------------
+instance.setChunkGenerator(YOUR_GENERATOR);
+--------------------
+
+It is also important to notice that, by default, the chunks of the instance are only stored in memory. In order to have them stored in a persistent way, you need to specify a "StorageFolder" and to save manually.
