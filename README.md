@@ -16,10 +16,6 @@ This Repo acts to document it's use and it's low-level API for display on the Mi
 * [The Minecraft Wiki](https://minecraft.gamepedia.com/Minecraft_Wiki) for all their useful info
 * [JProfiler](https://www.ej-technologies.com/products/jprofiler/overview.html) for their amazing Java profiler
 
-# Contributing
-See [the contributing file](CONTRIBUTING.md)!  
-All planned features are listed on [Trello](https://trello.com/b/4ysvj5hT/minestom)
-
 # License
 This project is licensed under the [Apache License Version 2.0](../LICENSE).
 
